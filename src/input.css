@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
+
+@font-face {
+    font-family: "Oswald";
+    src: url('/Oswald.woff2') format('woff2');
+    font-weight: 100 700;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@theme{
+    /*Variables de colores personalizadas*/
+    --font-oswald: 'Oswald', sans-serif;
+    --color-primario: #00171f;
+    --color-secundario: #007ea7;
+    --color-darkprimario: #003459;
+    --color-darksecundario: #00a7e1;
+    /*Variables de color, modo claro*/
+    --color-fondosecundario: #f8fafc;
+    --color-textosecundario: #003459;
+    /*Variables de color, modo oscuro*/
+    --color-fondodarksecundario: #003459;
+    --color-textodarksecundario: #e5e7eb;
+
+}
+
+.itemsNav{
+    @apply hover:scale-110 transition duration-300 active:text-primario dark:active:text-secundario;
+}
+
+.itemsSkills{
+    @apply grid grid-cols-1 place-items-center text-white bg-secundario rounded-xl p-5 hover:animate-scale hover:cursor-pointer;
+}
+
+.itemsService{
+    @apply bg-secundario p-5 rounded-lg hover:scale-95 transition duration-300;
+}

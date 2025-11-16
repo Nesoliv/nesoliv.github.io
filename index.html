@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesuady Olivero</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-white dark:bg-primario font-oswald overflow-x-hidden">
+    <!-- Cabecera de la pagina -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-2 bg-secundario/80  dark:bg-primario/30 backdrop-blur-md text-white">
+        <nav class="flex justify-between w-full m-4">
+            <h2
+                class="text-primario dark:text-white font-extrabold hover:scale-150 transition duration-300 hover:cursor-pointer">
+                N O</h2>
+            <input type="checkbox" id="menu-toggle" class="peer hidden" />
+            <label for="menu-toggle" class="cursor-pointer md:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <div class="hidden md:flex gap-10">
+                <a href="#inicio" class="itemsNav">Inicio</a>
+                <a href="#sobre-mi" class="itemsNav">Sobre mi</a>
+                <a href="#proyectos" class="itemsNav">Proyectos</a>
+                <a href="#servicios" class="itemsNav">Servicios</a>
+                <a href="#testimonios" class="itemsNav">Testimonios</a>
+                <a href="#contacto" class="itemsNav">Contacto</a>
+            </div>
+            <div
+                class="absolute top-16 right-4 bg-white shadow-md md:hidden hidden transform transition-opacity duration-300 opacity-0">
+            </div>
+        </nav>
+    </header>
+    <main class="flex flex-col w-full overflow-y-hidden">
+        <section id="inicio" class="grid grid-cols-1 md:grid-cols-2 h-screen place-content-center">
+            <div class="flex items-center flex-col">
+                <img class=" m-5 w-64 rounded-full" src="./assets/avatar.jpeg" alt="Avatar">
+            </div>
+            <div class="flex gap-2 items-center justify-center flex-col md:items-start">
+                <h1 class="text-lg md:text-xl font-medium dark:text-white">Nesuady Olivero</h1>
+                <p class="text-3xl md:text-4xl font-bold dark:text-white">DESARROLLADOR <span
+                        class="text-secundario">FULL STACK</span></p>
+                <div class="flex gap-2 items-center dark:text-white">
+                    <p>Sigueme en:</p>
+                    <a href="#" class="text-2xl">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-2xl">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+                                clip-rule="evenodd" />
+                            <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#proyectos"
+                        class="flex gap-2 items-center rounded-2xl bg-secundario focus:outline-2 focus:outline-offset-2 focus:outline-secundario text-white p-2">
+                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14" />
+                        </svg>
+                        <span>EXPLORAR PROYECTOS</span>
+                    </a>
+                    <a href="#"
+                        class="flex gap-1 items-center border border-secundario text-secundario rounded-2xl p-2 hover:scale-110 transition duration-300 hover:bg-secundario hover:text-white">
+                        <svg class="w-6 h-6 text-primario dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 19V5m0 14-4-4m4 4 4-4" />
+                        </svg>
+                        <span>DESCARGAR CV</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion sobre mi -->
+        <section id="sobre-mi" class="flex flex-col bg-fondosecundario dark:bg-fondodarksecundario p-5">
+            <h2 class="text-2xl text-center font-bold dark:text-white" data-aos="fade-right">SOBRE <span
+                    class="text-secundario">MI</span></h2>
+            <div class="rounded-lg p-8 mt-2 flex flex-col gap-5" data-aos="fade-right">
+                <p class="text-justify dark:text-white">
+                    ¡Hola, soy Nesuady! Analista de Sistemas; residenciada en Venezuela. Apasionada por el desarrollo
+                    web
+                    y la tecnologia. Mi curiosidad me llevó a descubrir el fascinante mundo de la programación y con
+                    ella, mi amor
+                    por todo lo relacionado con el mundo de sistemas. Estoy en constante crecimiento, siempre buscando
+                    aprender nuevas
+                    herramientas y mejorar mis habilidades para poder ofrecer soluciones innovadoras y efectivas. Con
+                    entusiasmo y dedicación,
+                    estoy lista para nuevos desafíos y proyectos en los que pueda seguir expandiendo mi conocimiento y
+                    aportar valor.
+                </p>
+            </div>
+            <h3 data-aos="fade-up" class="text-center text-titulo font-bold text-2xl m-5 dark:text-white">Mis <span
+                    class="text-secundario">Habilidades</span></h3>
+            <div class="flex flex-col justify-around md:flex-row" data-aos="fade-up">
+                <div>
+                    <h3 class="text-center font-medium text-xl mb-5 dark:text-white">Front-end</h3>
+                    <div class="grid grid-cols-3 gap-5 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
+                        <div
+                            class="grid grid-cols-1 place-items-center text-white bg-primario rounded-xl p-5 hover:animate-scale">
+                            <img class="w-16 h-16" src="./assets/html-5.png" alt="HTML">
+                            <h4 class="text-sm">HTML</h4>
+                            <span class="text-xs">HyperText Markup</span>
+                        </div>
+                        <div class="itemsSkills">
+                            <img class="w-16 h-16" src="./assets/css3.png" alt="CSS3">
+                            <h4 class="text-sm">CSS</h4>
+                            <span class="text-xs">Cascading Stylesheet</span>
+                        </div>
+                        <div class="itemsSkills">
+                            <img class="w-16 h-16" src="./assets/sass.png" alt="SASS">
+                            <h4 class="text-sm">SASS</h4>
+                            <span class="text-xs">Pre-procedador</span>
+                        </div>
+                        <div class="itemsSkills">
+                            <img class="w-20 h-16" src="./assets/tailwindcss.png" alt="Tailwind CSS">
+                            <h4 class="text-sm">Tailwind CSS</h4>
+                            <span class="text-xs">Libreria</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-center font-medium text-xl mb-5 dark:text-white">Back-end</h3>
+                    <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
+                        <div
+                            class="grid grid-cols-1 place-items-center  text-white bg-primario rounded-xl p-5 hover:animate-scale">
+                            <img class="w-16 h-16" src="./assets/html-5.png" alt="HTML">
+                            <h4 class="text-sm">HTML</h4>
+                            <span class="text-xs">HyperText Markup</span>
+                        </div>
+                        <div class="itemsSkills">
+                            <img class="w-16 h-16" src="./assets/html-5.png" alt="HTML">
+                            <h4 class="text-sm">HTML</h4>
+                            <span class="text-xs">HyperText Markup</span>
+                        </div>
+                        <div class="itemsSkills">
+                            <img class="w-16 h-16" src="./assets/html-5.png" alt="HTML">
+                            <h4 class="text-sm">HTML</h4>
+                            <span class="text-xs">HyperText Markup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de proyectos -->
+        <section class="">
+            <h3 id="proyectos" class="text-center text-titulo font-bold text-2xl text-secundario dark:text-white mt-5">
+                PROYECTOS</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 items-center mt-10">
+                <div class="flex flex-col p-5 hover:cursor-pointer">
+                    <a href=""><img src="./assets/youtube-project.png" alt="Maqueta de YouTube"></a>
+                    <div class="flex flex-col h-30 bg-secundario rounded-b-lg p-3 text-white">
+                        <h4>MAQUETA DE YOUTUBE</h4>
+                        <div class="flex gap-5 text-lg items-center">
+                            <span>
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                    d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                </svg>
+                            </span>
+                            <span>
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                    d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <a class="flex items-center justify-center gap-2 text-primario hover:text-white font-semibold"
+                            href="https://extraordinary-rolypoly-950d46.netlify.app/" target="_blank">VER PROYECTO<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="flex flex-col p-5">
+                    <a href=""><img src="./assets/spotify-project.png" alt="Maqueta de Spotify"></a>
+                    <div class="flex flex-col h-30 bg-secundario rounded-b-lg p-3 text-white">
+                        <h4>MAQUETA DE SPOTIFY</h4>
+                        <div class="flex gap-5 text-lg items-center">
+                            <span>
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                </svg>
+                            </span>
+                            <span>
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                </svg>
+                            </span>
+                            <span><i class="fa-brands fa-sass"></i></span>
+                        </div>
+                        <a class="flex items-center justify-center gap-2 text-primario hover:text-white font-semibold"
+                            href="#" target="_blank">VER PROYECTO<i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col p-5">
+                    <a href=""><img src="./assets/portfolio-project.png" alt="Maqueta de Portafolio"></a>
+                    <div class="flex flex-col h-30 bg-secundario rounded-b-lg p-3 text-white">
+                        <h4>PORTAFOLIO</h4>
+                        <div class="flex items-center gap-3">
+                            <span class="text-lg">
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                </svg>
+                            </span>
+                            <span>
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M11.782 5.72a4.773 4.773 0 0 0-4.8 4.173 3.43 3.43 0 0 1 2.741-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.934-2.865 3.137-3.921-.969 1.379-2.44 2.207-4.259 1.231-1.253-.673-2.19-3.438-5.959-3.318ZM6.8 11.979A4.772 4.772 0 0 0 2 16.151a3.431 3.431 0 0 1 2.745-1.687c1.689 0 2.974 1.972 3.758 2.587a5.733 5.733 0 0 0 5.382.935c2-.638 2.933-2.865 3.137-3.921-.97 1.379-2.44 2.208-4.259 1.231-1.253-.673-2.19-3.443-5.963-3.317Z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <a class="flex items-center justify-center gap-2 text-primario hover:text-white font-semibold"
+                            href="#inicio">VER PROYECTO<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="flex flex-col p-5">
+                    <a href=""><img src="./assets/insta-project.png" alt="Maqueta de Spotify"></a>
+                    <div class="flex flex-col h-30 bg-secundario rounded-b-lg p-3 text-white">
+                        <h4>MAQUETA DE INSTAGRAM</h4>
+                        <div class="flex gap-5 text-lg items-center">
+                            <span>
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.824L12 22l7.467-2.175L21 2H3Zm14.049 6.048H9.075l.172 2.016h7.697l-.626 6.565-4.246 1.381-4.281-1.455-.288-2.932h2.024l.16 1.411 2.4.815 2.346-.763.297-3.005H7.416l-.562-6.05h10.412l-.217 2.017Z" />
+                                </svg>
+                            </span>
+                            <span>
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z" />
+                                </svg>
+                            </span>
+                            <span><i class="fa-brands fa-sass"></i></span>
+                        </div>
+                        <a class="flex items-center justify-center gap-2 text-primario hover:text-white font-semibold"
+                            href="#">VER PROYECTO<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion de servicios -->
+        <section id="servicios" class="bg-fondosecundario md:h-screen content-center dark:bg-fondodarksecundario"
+            data-aos="fade-up">
+            <div class="text-center m-5">
+                <h3 class="text-center text-titulo font-bold text-2xl text-secundario dark:text-white">SERVCIOS</h3>
+                <span class="">¿Que ofrezco?</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-5 text-white">
+                <div class="bg-primario p-5 rounded-lg hover:scale-95 transition duration-300">
+                    <span class="flex justify-center hover:animate-impulse-rotation-left">
+                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m8 8-4 4 4 4m8 0 4-4-4-4m-2-3-4 14" />
+                        </svg>
+                    </span>
+                    <h3 class="font-bold text-center m-5">Desarrollo Front-end</h3>
+                    <p class="mt-5">Sitios y aplicaciones web personalizados creados con tecnologías modernas y mejores
+                        prácticas.
+                    </p>
+                </div>
+                <div class="itemsService">
+                    <span class="flex justify-center hover:animate-impulse-rotation-left">
+                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M5 5a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2H5Zm9 2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H14Zm3 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17ZM3 17v-3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm11-2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H14Zm3 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H17Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <h3 class="font-bold text-center m-5">Desarrollo full stack</h3>
+                    <p class="mt-5">Creación, diseño y mantenimiento de aplicaciones web completas, de la mano con el
+                        Front-end y el Back-end
+                    </p>
+                </div>
+                <div class="itemsService">
+                    <span class="flex justify-center hover:animate-impulse-rotation-left">
+                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 7.205c4.418 0 8-1.165 8-2.602C20 3.165 16.418 2 12 2S4 3.165 4 4.603c0 1.437 3.582 2.602 8 2.602ZM12 22c4.963 0 8-1.686 8-2.603v-4.404c-.052.032-.112.06-.165.09a7.75 7.75 0 0 1-.745.387c-.193.088-.394.173-.6.253-.063.024-.124.05-.189.073a18.934 18.934 0 0 1-6.3.998c-2.135.027-4.26-.31-6.3-.998-.065-.024-.126-.05-.189-.073a10.143 10.143 0 0 1-.852-.373 7.75 7.75 0 0 1-.493-.267c-.053-.03-.113-.058-.165-.09v4.404C4 20.315 7.037 22 12 22Zm7.09-13.928a9.91 9.91 0 0 1-.6.253c-.063.025-.124.05-.189.074a18.935 18.935 0 0 1-6.3.998c-2.135.027-4.26-.31-6.3-.998-.065-.024-.126-.05-.189-.074a10.163 10.163 0 0 1-.852-.372 7.816 7.816 0 0 1-.493-.268c-.055-.03-.115-.058-.167-.09V12c0 .917 3.037 2.603 8 2.603s8-1.686 8-2.603V7.596c-.052.031-.112.059-.165.09a7.816 7.816 0 0 1-.745.386Z" />
+                        </svg>
+                    </span>
+                    <h3 class="font-bold text-center m-5">Desarrollo Back-end</h3>
+                    <p class="mt-5">Creación y mantenimiento de infraestruturas robustas</p>
+                </div>
+                <div class="itemsService">
+                    <span class="flex justify-center hover:animate-impulse-rotation-left">
+                        <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M8.649 2.577A10.004 10.004 0 0 1 20.344 6.49a9.995 9.995 0 0 1 1.2 8.486l-.004.01-.005.015a2.958 2.958 0 0 1-2.836 2.001h-2.69a1.037 1.037 0 0 0-.95.68c-.047.13-.068.27-.06.409v.916A3.01 3.01 0 0 1 11.96 22a9.626 9.626 0 0 1-4.195-1l.009.005-.018-.009.01.004a10.1 10.1 0 0 1-5.716-7.996l-.001-.012a9.992 9.992 0 0 1 6.6-10.415Zm3.35 3.429a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12ZM8.53 7.518a1 1 0 0 0 0 2h.01a1 1 0 1 0 0-2h-.01Zm6.968 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM6.99 11.004a1 1 0 1 0 0 2H7a1 1 0 1 0 0-2h-.01Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    <h3 class="font-bold text-center m-5">Diseño UI/UX</h3>
+                    <p class="mt-5">Soluciones de diseño centradas en el usuario que combinan la estética con la
+                        funcionalidad y la usabilidad.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonios -->
+        <section id="testimonios" class="m-4 dark:text-white h-screen content-center">
+            <h3 class="text-center text-titulo font-bold text-2xl text-secundario" data-aos="zoom-in-down">TESTIMONIO
+            </h3>
+            <blockquote>
+                <p class="m-5 text-center text-xl" data-aos="zoom-in-down">"Lorem ipsum dolor, sit amet consectetur
+                    adipisicing elit. Nisi vel ad non fugit
+                    adipisci asperiores rem, itaque quod molestiae distinctio, impedit nihil corrupti
+                    debitis fugiat sit. Enim maiores consequatur repellat."
+                </p>
+            </blockquote>
+            <div class="flex flex-col items-center mt-5">
+                <div>
+                    <span class="text-2xl"><i class="fa-solid fa-circle-user"></i></span>
+                </div>
+                <div class="flex flex-row gap-3 items-center mt-5">
+                    <span>Nesuady Olivero</span>
+                    <span>Analista de Sistemas</span>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion de contacto -->
+        <section id="contacto" class=" bg-fondosecundario dark:bg-fondodarksecundario dark:text-white">
+            <h2 class="text-2xl text-titulo font-medium text-center text-secundario dark:text-white m-4">CONTACTO</h2>
+            <div class="flex flex-col justify-around md:flex-row">
+                <div class="flex flex-col md:w-[50%] m-4 md:justify-center" data-aos="fade-right">
+                    <h3 class="text-xl text-titulo font-medium">¿Listo para comenzar tu proyecto?</h3>
+                    <div class="flex flex-col">
+                        <span>Email</span>
+                        <p>nesuadyolivero@gmail.com</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <span>WhatsApp</span>
+                        <p>+58 412 8835860</p>
+                    </div>
+                    <div class="flex flex-col">
+                        <span>Ubicación</span>
+                        <p>Valencia, VE</p>
+                    </div>
+                </div>
+                <div class="md:w-[50%] m-4" data-aos="fade-left">
+                    <form action="" class="flex flex-col gap-2">
+                        <h3 class="text-xl text-titulo font-medium text-center">¡Ponte en contacto!</h3>
+                        <div class="flex flex-col gap-2">
+                            <label for="name" class="text-sm font-medium">Nombre: </label>
+                            <input type="text" name="name" placeholder="Ingresa tu nombre"
+                                class="p-2 border rounded-lg">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="email" class="text-sm font-medium">Email:</label>
+                            <input type="email" name="email" id="" placeholder="Ingresa tu email"
+                                class="p-2 border rounded-lg">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="telefono" class="text-sm font-medium">Telefono:</label>
+                            <input type="text" name="telefono" id="" placeholder="Ingresa tu telefono"
+                                class="p-2 border rounded-lg">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="mensaje" class="text-sm font-medium">Mensaje:</label>
+                            <textarea name="mensaje" id="" class="p-2 border rounded-lg"
+                                placeholder="Escribe tu proyecto"></textarea>
+                        </div>
+                        <div class="flex justify-end mt-5">
+                            <button type="button"
+                                class="rounded-lg bg-secundario text-white p-2 w-30 cursor-pointer shadow-sm shadow-primario active:bg-primario">ENVIAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Pie de pagina -->
+    <footer class=" dark:text-white p-5">
+        <div class="text-center">&copy; Nesuady Olivero, 2025.</div>
+    </footer>
+</body>
+<!-- Script para iniciar el cdn de AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
